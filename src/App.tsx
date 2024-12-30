@@ -20,6 +20,19 @@ const App = () => {
       price: 149,      
       imageUrl: 'https://via.placeholder.com/150',
     },
+    {
+      name: 'Headset Z',
+    description: 'Immersive audio experience with noise cancellation.',
+    price: 149,      
+    imageUrl: 'https://via.placeholder.com/150',
+    },
+    {
+      name: 'Headset Z',
+      description: 'Immersive audio experience with noise cancellation.',
+      price: 149,      
+      imageUrl: 'https://via.placeholder.com/150',
+    }, 
+  
   ];
 
   return (
