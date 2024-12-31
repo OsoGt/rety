@@ -1,7 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import ProductList from "./components/ProductList/ProductList";
-import productsData from "./assets/products.json";
+import { useState } from "react";
 import {
   FaShoppingCart,
   FaUser,
@@ -15,16 +13,32 @@ import {
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    setProducts(productsData);
-  }, []);
+  const products = [
+    {
+      name: "Tablet X",
+      description: "Powerful tablet with a stunning display.",
+      price: 299,
+      imageUrl: "https://via.placeholder.com/150",
+    },
+    {
+      name: "Smartphone Y",
+      description: "High-performance smartphone with a great camera.",
+      price: 499,
+      imageUrl: "https://via.placeholder.com/150",
+    },
+    {
+      name: "Headset Z",
+      description: "Immersive audio experience with noise cancellation.",
+      price: 199,
+      imageUrl: "https://via.placeholder.com/150",
+    },
+  ];
 
   return (
     <div className="app">
       <nav className="navbar">
         <div className="nav-brand">
-          <h1>ByteShop</h1>
+          <h1>E-Shop</h1>
         </div>
 
         <div className="search-bar">
@@ -50,9 +64,7 @@ const App = () => {
         </div>
       </nav>
 
-      <main>
-        <ProductList products={products} />
-      </main>
+      <main>{/* Products section */}</main>
 
       <footer className="footer">
         <div className="footer-content">
